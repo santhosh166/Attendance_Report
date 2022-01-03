@@ -140,9 +140,10 @@ if s.connection():
             p=s.create("t"+"_"+str(date)+"_"+str(month)+"_"+str(year))
             print("[bold yellow]0[/bold yellow].Exit from attendance \n[bold yellow]1[/bold yellow].continue")
             go=int(input("Enter:"))
+            
             print()
 
-            while p!='p':
+            while p!='p' and go!=0:
                 roll_no=int(input("Enter the roll no:"))
                 name=input("Enter the name:")
                 active=input("Enter the active status if present type [bold yellow]'yes'[/bold yellow] or type [bold yellow]'no'[/bold yellow] :")
@@ -155,7 +156,7 @@ if s.connection():
                 if cancel==0:
                     break
 
-                elif cancel==1:
+                if cancel==1:
                     roll_no=int(input("Enter the roll no:"))
                     name=input("Enter the name:")
                     print("Enter the active status if present type [bold yellow]'yes'[/bold yellow] or type [bold yellow]'no'[/bold yellow]")
